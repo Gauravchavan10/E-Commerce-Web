@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-4" *ngFor="let category of categories">
+      <div class="card">
+        <img src="{{category.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{category.id}}</h5>
+          <button (click)="onclickhandler()" class="btn btn-primary">Select</button>
+          
+        </div>
+      </div>
+    </div>
+   
+  </div>

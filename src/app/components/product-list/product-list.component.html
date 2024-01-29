@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 class="text-center">All Products</h2>
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let Product of products">
+          <div class="card">
+            <img src="{{Product.image}}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{Product.title}}</h5>
+              <p><span class="badge bg-secondary">{{Product.category.name}}</span></p>
+              <h2>{{Product.price | currency :'INR'}}</h2>
+              <button (click)="onclickhandler(Product.id)" class="btn btn-primary btn-block">Show details</button>
+            </div>
+          </div>
+        </div>
+        
